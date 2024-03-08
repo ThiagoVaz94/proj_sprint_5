@@ -5,7 +5,9 @@ import streamlit as st
 car_data = pd.read_csv('vehicles.csv') # lendo os dados
 hist_button = st.button('Criar histograma') # criar um botão
 hist_buttondois = st.button('Criar gráfico de dispersão') # criar um botão
+
 if hist_button: # se o botão for clicado
+    st.header('Histograma')
     # escrever uma mensagem
     st.write('Criando um histograma para o conjunto de dados de anúncios de vendas de carros')
 
@@ -15,6 +17,7 @@ if hist_button: # se o botão for clicado
     st.plotly_chart(fig, use_container_width=True)
     
 if hist_buttondois: # se o botão for clicado
+    st.header('Gráfico de Dispersão')
     # escrever uma mensagem
     st.write('Criando um gráfico de dispersão para o conjunto de dados de anúncios de vendas de carros')
 
